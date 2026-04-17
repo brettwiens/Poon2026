@@ -7,7 +7,7 @@ let teamInfo   = {};     // team colors / info
 
 let debugMessages = [];
 let debugPanel = null;
-const DEBUG_ENABLED = true;
+const DEBUG_ENABLED = false;
 
 // Sort state for Remaining Players tab
 let sortCol = 'points';

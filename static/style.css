@@ -426,7 +426,7 @@ tr:hover td { background: rgba(59,130,246,0.06); }
   vertical-align: middle;
 }
 
-..debug-log { display: none !important; }
+.debug-log { display: none !important; }
 
 .board-cell {
   min-width: 120px;

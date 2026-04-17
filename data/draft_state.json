@@ -1,0 +1,18 @@
+{
+  "pool_name": "",
+  "pool_players": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "draft_order": [],
+  "picks": {},
+  "current_pick_index": 0,
+  "setup_complete": false,
+  "n_rounds": 10
+}

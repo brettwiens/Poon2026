@@ -1,0 +1,210 @@
+REQ GET /
+Serving index page
+REQ GET /static/app.js
+REQ GET /api/state
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ GET /static/app.js
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.111 app.js loaded
+REQ GET /api/state
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.113 init() started
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.116 Loaded team info for 33 teams
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.116 Calling loadState()
+[DEBUG] 18:05:17.117 fetch /api/state
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.159 state loaded: setup_complete=true, pool_players=8, picks=16
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.160 loadState() completed
+[DEBUG] 18:05:17.160 Calling renderAll()
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.164 renderAll() completed
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.178 Calling setupTabSwitching()
+REQ POST /api/debug_log
+[DEBUG] 18:05:17.178 setupTabSwitching() completed
+REQ GET /api/players
+REQ POST /api/debug_log
+REQ GET /static/logos/EDM_light.svg
+ers()
+REQ GET /static/logos/TBL_light.svg
+[DEBUG] 18:05:17.179 fetch /api/players
+REQ GET /static/logos/BOS_light.svg
+REQ GET /static/logos/COL_light.svg
+REQ GET /static/logos/MTL_light.svg
+REQ GET /static/logos/DAL_light.svg
+REQ GET /static/logos/VGK_light.svg
+REQ GET /static/logos/MIN_light.svg
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+REQ GET /static/logos/UTA_light.svg
+475
+[DEBUG] 18:05:17.216 loadPlayers() completed
+REQ GET /static/logos/BUF_light.svg
+REQ GET /static/logos/CAR_light.svg
+REQ GET /static/logos/OTT_light.svg
+REQ GET /static/logos/PIT_light.svg
+REQ POST /api/debug_log
+REQ GET /static/logos/PHI_light.svg
+[DEBUG] 18:05:17.228 renderRemainingPlayers() after loadPlayers completed
+REQ GET /static/logos/LAK_light.svg
+REQ GET /static/logos/ANA_light.svg
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ GET /api/state
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.104 app.js loaded
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.105 init() started
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.106 Loaded team info for 33 teams
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.107 Calling loadState()
+[DEBUG] 18:07:38.107 fetch /api/state
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.212 state loaded: setup_complete=true, pool_players=8, picks=16
+REQ GET /static/logos/EDM_light.svg
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.213 loadState() completed
+REQ GET /api/players
+REQ GET /static/logos/TBL_light.svg
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.213 Calling renderAll()
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.218 renderAll() completed
+[DEBUG] 18:07:38.220 Calling setupTabSwitching()
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.220 setupTabSwitching() completed
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.221 Calling loadPlayers()
+REQ GET /static/logos/BOS_light.svg
+REQ GET /static/logos/COL_light.svg
+[DEBUG] 18:07:38.221 fetch /api/players
+REQ GET /static/logos/MTL_light.svg
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:07:38.262 players loaded: 475
+[DEBUG] 18:07:38.262 loadPlayers() completed
+REQ GET /static/logos/VGK_light.svg
+REQ GET /static/logos/MIN_light.svg
+REQ POST /api/debug_log
+REQ GET /static/logos/UTA_light.svg
+[DEBUG] 18:07:38.275 renderRemainingPlayers() after loadPlayers completed
+REQ GET /static/logos/BUF_light.svg
+REQ GET /static/logos/CAR_light.svg
+REQ GET /static/logos/OTT_light.svg
+REQ GET /static/logos/PIT_light.svg
+REQ GET /static/logos/PHI_light.svg
+REQ GET /static/logos/LAK_light.svg
+REQ GET /static/logos/ANA_light.svg
+REQ GET /
+Serving index page
+REQ GET /static/style.css
+REQ GET /static/app.js
+REQ POST /api/debug_log
+inline script running
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.695 app.js loaded
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.696 init() started
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+REQ GET /api/state
+ Loaded team info for 33 teams
+[DEBUG] 18:08:48.697 Calling loadState()
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.698 fetch /api/state
+REQ GET /static/logos/EDM_light.svg
+REQ POST /api/debug_log
+REQ GET /static/logos/TBL_light.svg
+[DEBUG] 18:08:48.741 state loaded: setup_complete=true, pool_players=8, picks=16
+REQ GET /static/logos/BOS_light.svg
+REQ GET /static/logos/COL_light.svg
+REQ GET /static/logos/MTL_light.svg
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.743 loadState() completed
+REQ POST /api/debug_log
+REQ GET /api/players
+[DEBUG] 18:08:48.748 renderAll() completed
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.749 Calling setupTabSwitching()
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.750 setupTabSwitching() completed
+REQ POST /api/debug_log
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.751 fetch /api/players
+[DEBUG] 18:08:48.750 Calling loadPlayers()
+REQ GET /static/logos/DAL_light.svg
+REQ GET /static/logos/VGK_light.svg
+REQ GET /static/logos/UTA_light.svg
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.799 players loaded: 475
+REQ POST /api/debug_log
+[DEBUG] 18:08:48.799 loadPlayers() completed
+REQ GET /static/logos/BUF_light.svg
+REQ GET /static/logos/CAR_light.svg
+REQ POST /api/debug_log
+REQ GET /static/logos/OTT_light.svg
+REQ GET /static/logos/PIT_light.svg
+REQ GET /static/logos/PHI_light.svg
+[DEBUG] 18:08:48.812 renderRemainingPlayers() after loadPlayers completed
+REQ GET /static/logos/LAK_light.svg
+REQ GET /static/logos/ANA_light.svg
+REQ POST /api/full_reset
+REQ POST /api/debug_log
+REQ GET /api/state
+[DEBUG] 18:09:12.423 fetch /api/state
+REQ POST /api/debug_log
+[DEBUG] 18:09:12.431 state loaded: setup_complete=false, pool_players=0, picks=0
+REQ POST /api/setup_count
+REQ POST /api/debug_log
+REQ GET /api/state
+[DEBUG] 18:09:18.065 fetch /api/state
+REQ POST /api/debug_log
+[DEBUG] 18:09:18.073 state loaded: setup_complete=false, pool_players=8, picks=0

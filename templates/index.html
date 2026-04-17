@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hockey Pool Draft 2026 🏒</title>
+  <link rel="stylesheet" href="/static/style.css?v={{ build_version }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <h1>🏒 Hockey Pool <span>2026</span></h1>
+  <div class="top-bar-actions">
+    <button class="btn btn-ghost btn-sm" onclick="refreshPlayers()" title="Re-fetch player stats from NHL API">
+      🔄 Refresh Players
+    </button>
+    <button class="btn btn-ghost btn-sm" onclick="exportCsv()">
+      📄 Export CSV
+    </button>
+    <button class="btn btn-success btn-sm" onclick="exportExcel()">
+      📥 Export Excel
+    </button>
+  </div>
+</div>
+
+<!-- Tab Navigation -->
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="tab-setup">
+    ⚙️ Draft Setup
+  </button>
+  <button class="tab-btn" data-tab="tab-selection">
+    🎯 Player Selection
+  </button>
+  <button class="tab-btn" data-tab="tab-board">
+    📋 Draft Board
+  </button>
+  <button class="tab-btn" data-tab="tab-bracket">
+    🏆 Playoff Bracket
+  </button>
+  <button class="tab-btn" data-tab="tab-remaining">
+    📊 Player Stats
+  </button>
+</nav>
+
+<!-- ── Tab 1: Draft Setup ── -->
+<div id="tab-setup" class="tab-pane active">
+  <div id="setup-content">
+    <div class="loading">Loading draft setup…</div>
+  </div>
+</div>
+
+<!-- ── Tab 2: Player Selection ── -->
+<div id="tab-selection" class="tab-pane">
+  <div id="selection-content">
+    <div class="loading">Loading…</div>
+  </div>
+</div>
+
+<!-- ── Tab 3: Draft Board ── -->
+<div id="tab-board" class="tab-pane">
+  <div id="board-content">
+    <div class="loading">Loading draft board…</div>
+  </div>
+</div>
+
+<!-- ── Tab 4: Playoff Bracket ── -->
+<div id="tab-bracket" class="tab-pane">
+  <div id="bracket-content">
+    <div class="loading">Loading bracket…</div>
+  </div>
+</div>
+
+<!-- ── Tab 5: Remaining Players ── -->
+<div id="tab-remaining" class="tab-pane">
+  <div id="remaining-content">
+    <div class="loading">Loading players…</div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast"></div>
+
+<!-- Confirm Modal -->
+<div id="confirm-modal" class="modal-overlay">
+  <div class="modal-box">
+    <h3>⚠️ Confirm Reset</h3>
+    <p id="confirm-msg"></p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="document.getElementById('confirm-modal').classList.remove('open')">Cancel</button>
+      <button class="btn btn-danger" id="confirm-ok">Reset</button>
+    </div>
+  </div>
+</div>
+
+<!-- Inject team info for JavaScript -->
+<script>
+  window.TEAM_INFO = {{ team_info_json | safe }};
+  try {
+    fetch('/api/debug_log', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({message: 'inline script running'})
+    }).catch(() => {});
+  } catch (e) {
+    console.error('inline debug failed', e);
+  }
+</script>
+<script src="/static/app.js?v={{ build_version }}"></script>
+</body>
+</html>

@@ -847,6 +847,11 @@ function renderRemainingTable() {
     {key:'ppg',     label:'P/GP',         cls:''},
   ];
 
+  if (showDrafted) {
+    cols.push({key:'drafted_by', label:'Drafted By', cls:''});
+    cols.push({key:'round',      label:'Round',      cls:''});
+  }
+
   const ths = cols.map(c => {
     const active = sortCol === c.key;
     const cls = `${c.cls} ${c.key !== 'logo' ? `sortable${active ? (sortDir === 'asc' ? ' sort-asc' : ' sort-desc') : ''}` : ''}`.trim();
@@ -859,7 +864,7 @@ function renderRemainingTable() {
     const bg = info.primary || '#333';
     const tc = info.text || '#fff';
     const logo = info.logo ? `<img class="team-logo team-logo-small" src="${info.logo}" alt="${p.team} logo">` : '';
-    return `<tr class="${drafted ? 'drafted-row' : ''}">
+    let row = `<tr class="${drafted ? 'drafted-row' : ''}">
       <td style="font-weight:${drafted ? 'normal' : '600'}">${drafted ? '🚫 ' : ''}${p.name}</td>
       <td class="player-logo-cell">${logo}</td>
       <td><span class="team-badge" style="background:${bg};color:${tc}">${p.team}</span></td>
@@ -868,8 +873,13 @@ function renderRemainingTable() {
       <td class="stat-num">${p.goals}</td>
       <td class="stat-num">${p.assists}</td>
       <td class="stat-num text-gold">${p.points}</td>
-      <td class="stat-num">${p.ppg.toFixed(3)}</td>
-    </tr>`;
+      <td class="stat-num">${p.ppg.toFixed(3)}</td>`;
+    if (showDrafted) {
+      row += `<td>${p.drafted_by}</td>`;
+      row += `<td class="stat-num">${p.round || ''}</td>`;
+    }
+    row += `</tr>`;
+    return row;
   }).join('');
 
   tableEl.innerHTML = `<table>

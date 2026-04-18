@@ -516,8 +516,15 @@ def get_players():
     players = load_all_players()
     state = load_draft_state()
     drafted = {pk['nhl_player'] for pk in state.get('picks', {}).values() if pk}
+    pick_map = {pk['nhl_player']: {'by': pk['pool_player'], 'round': pk['round']} for pk in state.get('picks', {}).values() if pk}
     for p in players:
         p['drafted'] = p['name'] in drafted
+        if p['drafted']:
+            p['drafted_by'] = pick_map[p['name']]['by']
+            p['round'] = pick_map[p['name']]['round']
+        else:
+            p['drafted_by'] = ''
+            p['round'] = 0
     return jsonify(players)
 
 

@@ -12,71 +12,79 @@
 
 <!-- Top Bar -->
 <div class="top-bar">
-  <h1>🏒 Hockey Pool <span>2026</span></h1>
+  <div class="logo-title">
+    <img src="https://brettwiens.com/wp-content/uploads/2020/11/bw_spine_2-removebg-preview.png" alt="Logo" class="logo">
+    <h1>Hockey Pool <span>2026</span></h1>
+  </div>
   <div class="top-bar-actions">
     <button class="btn btn-ghost btn-sm" onclick="refreshPlayers()" title="Re-fetch player stats from NHL API">
       🔄 Refresh Players
     </button>
     <button class="btn btn-ghost btn-sm" onclick="exportCsv()">
-      📄 Export CSV
+      📄 Export Pool Information
     </button>
     <button class="btn btn-success btn-sm" onclick="exportExcel()">
-      📥 Export Excel
+      📊 Export Player Statistics
     </button>
   </div>
 </div>
 
-<!-- Tab Navigation -->
-<nav class="tab-nav">
-  <button class="tab-btn active" data-tab="tab-setup">
-    ⚙️ Draft Setup
-  </button>
-  <button class="tab-btn" data-tab="tab-selection">
-    🎯 Player Selection
-  </button>
-  <button class="tab-btn" data-tab="tab-board">
-    📋 Draft Board
-  </button>
-  <button class="tab-btn" data-tab="tab-bracket">
-    🏆 Playoff Bracket
-  </button>
-  <button class="tab-btn" data-tab="tab-remaining">
-    📊 Player Stats
-  </button>
-</nav>
+<div class="main-container">
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <button class="tab-btn active" data-tab="tab-setup">
+      ⚙️ Draft Setup
+    </button>
+    <button class="tab-btn" data-tab="tab-selection">
+      🎯 Player Selection
+    </button>
+    <button class="tab-btn" data-tab="tab-board">
+      📋 Draft Board
+    </button>
+    <button class="tab-btn" data-tab="tab-bracket">
+      🏆 Playoff Bracket
+    </button>
+    <button class="tab-btn" data-tab="tab-remaining">
+      📊 Player Stats
+    </button>
+  </nav>
 
-<!-- ── Tab 1: Draft Setup ── -->
-<div id="tab-setup" class="tab-pane active">
-  <div id="setup-content">
-    <div class="loading">Loading draft setup…</div>
-  </div>
-</div>
+  <!-- Main Content -->
+  <div class="content">
+    <!-- ── Tab 1: Draft Setup ── -->
+    <div id="tab-setup" class="tab-pane active">
+      <div id="setup-content">
+        <div class="loading">Loading draft setup…</div>
+      </div>
+    </div>
 
-<!-- ── Tab 2: Player Selection ── -->
-<div id="tab-selection" class="tab-pane">
-  <div id="selection-content">
-    <div class="loading">Loading…</div>
-  </div>
-</div>
+    <!-- ── Tab 2: Player Selection ── -->
+    <div id="tab-selection" class="tab-pane">
+      <div id="selection-content">
+        <div class="loading">Loading…</div>
+      </div>
+    </div>
 
-<!-- ── Tab 3: Draft Board ── -->
-<div id="tab-board" class="tab-pane">
-  <div id="board-content">
-    <div class="loading">Loading draft board…</div>
-  </div>
-</div>
+    <!-- ── Tab 3: Draft Board ── -->
+    <div id="tab-board" class="tab-pane">
+      <div id="board-content">
+        <div class="loading">Loading draft board…</div>
+      </div>
+    </div>
 
-<!-- ── Tab 4: Playoff Bracket ── -->
-<div id="tab-bracket" class="tab-pane">
-  <div id="bracket-content">
-    <div class="loading">Loading bracket…</div>
-  </div>
-</div>
+    <!-- ── Tab 4: Playoff Bracket ── -->
+    <div id="tab-bracket" class="tab-pane">
+      <div id="bracket-content">
+        <div class="loading">Loading bracket…</div>
+      </div>
+    </div>
 
-<!-- ── Tab 5: Remaining Players ── -->
-<div id="tab-remaining" class="tab-pane">
-  <div id="remaining-content">
-    <div class="loading">Loading players…</div>
+    <!-- ── Tab 5: Remaining Players ── -->
+    <div id="tab-remaining" class="tab-pane">
+      <div id="remaining-content">
+        <div class="loading">Loading players…</div>
+      </div>
+    </div>
   </div>
 </div>
 

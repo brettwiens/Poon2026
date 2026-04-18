@@ -1,15 +1,6 @@
 {
   "pool_name": "",
-  "pool_players": [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
-  ],
+  "pool_players": [],
   "draft_order": [],
   "picks": {},
   "current_pick_index": 0,
